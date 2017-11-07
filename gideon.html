@@ -4,10 +4,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script type="text/javascript">
-
 		var accessToken = "60771ddd0582429c80a7630389f97af9";
 		var baseUrl = "https://api.api.ai/v1/";
-
 		$(document).ready(function() {
 			$("#input").keypress(function(event) {
 				if (event.which == 13) {
@@ -19,9 +17,7 @@
 				switchRecognition();
 			});
 		});
-
 		var recognition;
-
 		function startRecognition() {
 			recognition = new webkitSpeechRecognition();
 			recognition.onstart = function(event) {
@@ -41,7 +37,6 @@
 			recognition.lang = "en-US";
 			recognition.start();
 		}
-	
 		function stopRecognition() {
 			if (recognition) {
 				recognition.stop();
@@ -49,7 +44,6 @@
 			}
 			updateRec();
 		}
-
 		function switchRecognition() {
 			if (recognition) {
 				stopRecognition();
@@ -57,16 +51,13 @@
 				startRecognition();
 			}
 		}
-
 		function setInput(text) {
 			$("#input").val(text);
 			send();
 		}
-
 		function updateRec() {
 			$("#rec").text(recognition ? "Stop" : "Speak");
 		}
-
 		function send() {
 			var text = $("#input").val();
 			$.ajax({
@@ -88,11 +79,9 @@
 			});
 			setResponse("Loading...");
 		}
-
 		function setResponse(val) {
 			$("#response").text(val);
 		}
-
 	</script>
 	<style type="text/css">
 		body { width: 500px; margin: 0 auto; text-align: center; margin-top: 20px; }
