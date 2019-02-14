@@ -3,22 +3,18 @@
   "name": "Who",
   "auto": true,
   "contexts": [],
-  "responses": [
-    {
-      "resetContexts": false,
-      "affectedContexts": [],
-      "parameters": [],
-      "messages": [
-        {
-          "type": 0,
-          "lang": "en",
-          "speech": "I am Gideon, an interactive artificial consciousness programmed to operate the Waverider\u0027s critical systems and to aid Rip Hunter on his mission."
-        }
-      ],
-      "defaultResponsePlatforms": {},
-      "speech": []
-    }
-  ],
+  "responses": [{
+    "resetContexts": false,
+    "affectedContexts": [],
+    "parameters": [],
+    "messages": [{
+      "type": 0,
+      "lang": "en",
+      "speech": "I am Gideon, an interactive artificial consciousness programmed to operate the Waverider\u0027s critical systems and to aid Rip Hunter on his mission."
+    }],
+    "defaultResponsePlatforms": {},
+    "speech": []
+  }],
   "priority": 500000,
   "webhookUsed": false,
   "webhookForSlotFilling": false,
